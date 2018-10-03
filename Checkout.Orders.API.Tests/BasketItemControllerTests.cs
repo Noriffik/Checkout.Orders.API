@@ -47,7 +47,7 @@ namespace Checkout.Orders.Tests
             // Arrange
             var client = _factory.CreateClient();
             // Act
-            var request = new CreateItemBasketRequest {ItemDescription = "test"};
+            var request = new CreateItemBasketRequest {ItemDescription = "test", ItemCode = "Test", Quantity = 1};
             var response = await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json"));
             // Assert
             response.EnsureSuccessStatusCode(); // Status Code 200-299

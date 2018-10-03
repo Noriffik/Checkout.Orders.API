@@ -71,7 +71,9 @@ namespace Checkout.Orders.API.Client.Tests
             // Act
             var response = await client.Item.AddItem(new Guid(id), new CreateItemBasketRequest
             {
-                ItemDescription = "test", 
+                ItemDescription = "test",
+                ItemCode =  "code10",
+                Quantity = 34
             });
 
             response.ShouldNotBeEmpty();
