@@ -36,7 +36,6 @@ namespace Microsoft.Extensions.DependencyInjection
                 c.AddProfile<Checkout.Orders.Domain.Infrastructure.Mapper.MapperDefinitions>();
             });
             services.AddSingleton(s => config.CreateMapper());
-
             return services;
         }
     }
